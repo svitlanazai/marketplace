@@ -4,11 +4,11 @@ class HomePageObject extends PageObject {
   url = '';
 
   get searchField() {
-    return cy.get('.sc-iIUQWv')
+    return cy.get('.sc-iIUQWv');
   }
 
   get searchBtn() {
-    return cy.get('.sc-fotOHu.exrPqG')
+    return cy.get('.sc-fotOHu.exrPqG');
   }
 
   get firstPageProducts() {
@@ -16,19 +16,19 @@ class HomePageObject extends PageObject {
   }
 
   get secondPageProducts() {
-    cy.get('.sc-bXdNzS').scrollTo('bottom');
-    return cy.getByDataAtr('product-card')
+    cy.get('.sc-bXdNzS').scrollTo('bottom')
+      return cy.getByDataAtr('product-card');
   }
 
   typeSearchText(text) {
     this.searchField
-    .type(text)
-    .type('{enter}');
+      .type(text)
+      .type('{enter}');
   }
 
   clickSearchBtn() {
     this.searchBtn
-    .click()
+      .click();
   }
 }
 

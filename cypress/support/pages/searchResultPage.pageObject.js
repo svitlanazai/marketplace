@@ -3,7 +3,7 @@ import PageObject from '../PageObject';
 class SearchPageObject extends PageObject {
 
   get productCard() {
-    return cy.getByDataAtr('product-card')
+    return cy.getByDataAtr('product-card');
   }
 
   assertUrl(searchText) {
@@ -12,21 +12,21 @@ class SearchPageObject extends PageObject {
 
   openSearchProduct(title) {
     this.productCard
-    .first()
-    .contains(title)
-    .click()
+      .first()
+      .contains(title)
+      .click();
   }
 
   assertFirstProduct(title) {
     this.productCard
-    .first()
-    .should('contain.text', title)
+      .first()
+      .should('contain.text', title);
   }
 
   assertLastProduct(title) {
     this.productCard
-    .last()
-    .should('contain.text', title)
+      .last()
+      .should('contain.text', title);
   } 
 }
 
